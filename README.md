@@ -11,16 +11,22 @@ This distribution of MidiKey contains the the main C++ code and a CMakeLists.txt
 Create a project for the IDE of your choice using CMake and build the software using the IDE.
 
 Following installed libraries must be present on your system for building:
+
 libxdo (f.e. package libxdo-dev on debian)
+
 rtmidi (librtmidi-dev on debian)
+
 nlohmann json library (https://github.com/nlohmann/json - copy json.hpp to /usr/local/include/nlohmann)
+
 cxxopts library (copy cxxopts.hpp to /usr/local/include)
 
 ## Program Parameters
 
 Running application without parameters will output the help.
 There are currently only two options:
+
 Parameter1: -p Lists ports of all connected Midi devices
+
 Parameter2: -f Starts listening for incoming messages and sends configured keys to active window
 
 The program will exit the listening mode after pressing enter.
@@ -29,6 +35,7 @@ The program will exit the listening mode after pressing enter.
 
 Program options have to be specified using the MidiKey JSON format config file. An example config is provided in the repository
 in the form of config_example.json.
+
 MidiKey will look for the file named config.json in its current directory. Please modify the example config to suit your needs
 and rename/copy to the correct destination.
 
@@ -41,4 +48,4 @@ upon reception of the midi message. See libxdo/xdotools for details about the ke
 
 ## Legal and ethical
 
-The RtMidi license is similar to the MIT License, with the added *feature* that modifications be sent to the developer.  Please see [LICENSE](LICENSE).
+The MidiKey license is similar to the MIT License, with the added *feature* that modifications be sent to the developer.  Please see [LICENSE](LICENSE).
