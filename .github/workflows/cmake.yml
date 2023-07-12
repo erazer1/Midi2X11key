@@ -20,10 +20,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    # previously fetched CPM from github, now provide with code
+    # mkdir -p cmake
+    # wget -O cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake
     - name: Install Libs
       run: |
-        mkdir -p cmake
-        wget -O cmake/CPM.cmake https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake
         sudo apt-get update
         sudo apt-get install libxdo-dev
         sudo apt-get install librtmidi-dev
