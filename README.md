@@ -16,9 +16,11 @@ libxdo (f.e. package libxdo-dev on debian)
 
 rtmidi (librtmidi-dev on debian)
 
-nlohmann json library (https://github.com/nlohmann/json - copy json.hpp to /usr/local/include/nlohmann)
+Following libraries will be downloaded automatically by the CPM cmake library:
 
-cxxopts library (copy cxxopts.hpp to /usr/local/include)
+nlohmann json library
+
+cxxopts library
 
 ## Program Parameters
 
