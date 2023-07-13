@@ -1,4 +1,8 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.8)
+
+set (MIDIKEY_MAJOR_VERSION 0)
+set (MIDIKEY_MINOR_VERSION 0)
+set (MIDIKEY_PATCH_VERSION 1)
 
 #find_package(RtMidi)
 
@@ -8,11 +12,17 @@ set( PROJECT_NAME "MidiKey" )
 ## Set our project name
 project(${PROJECT_NAME})
 
-## Use all the *.cpp files we found under this folder for the project
-FILE(GLOB SRCS "*.cpp" "*.c")
+set (${PROJECT_NAME}_SOURCES
+main.cpp
+)
+
+configure_file(
+   ${PROJECT_SOURCE_DIR}/version.h.in
+   ${PROJECT_SOURCE_DIR}/version.h
+   @ONLY)  
 
 ## Define the executable
-add_executable(${PROJECT_NAME} ${SRCS})
+add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
 
 # add dependencies
 include(cmake/CPM.cmake)

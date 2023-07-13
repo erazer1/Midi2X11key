@@ -12,6 +12,7 @@ extern "C" {
 #include <cxxopts.hpp>
 #include <nlohmann/json.hpp>
 #include "RtMidi.h"
+#include "version.h"
 
 class Xdo
 {
@@ -242,6 +243,8 @@ int main(int argc, char* argv[])
 	if (argc == 1)
 	{
 		std::cout << options.help() << std::endl;
+		std::cout << "MidiKey version " << MIDIKEY_MAJOR_VERSION << "." << MIDIKEY_MINOR_VERSION << "." << 
+			MIDIKEY_PATCH_VERSION << std::endl;
 		exit(0);
 	}
 
