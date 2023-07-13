@@ -1,0 +1,8 @@
+#ifndef _VERSION_H_
+#define _VERSION_H_
+
+const unsigned int MIDIKEY_MAJOR_VERSION = @MIDIKEY_MAJOR_VERSION@;
+const unsigned int MIDIKEY_MINOR_VERSION = @MIDIKEY_MINOR_VERSION@;
+const unsigned int MIDIKEY_PATCH_VERSION = @MIDIKEY_PATCH_VERSION@;
+
+#endif // _VERSION_H_
