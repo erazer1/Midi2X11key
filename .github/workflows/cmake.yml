@@ -110,3 +110,14 @@ jobs:
           build/MidiKey
           LICENSE
           README.md
+  release:
+    needs: [ubuntu-latest, ubuntu-20_04]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download production artifacts
+        uses: actions/download-artifact@v3
+      - name: Display structure of downloaded files
+        run: ls -R      
+    
