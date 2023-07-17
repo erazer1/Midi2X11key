@@ -62,13 +62,17 @@ jobs:
         uses: actions/download-artifact@v3
       - name: Display structure of downloaded files
         run: ls -R     
+      - name: Rename builds
+        run: |
+          mv ./MidiKey ubuntu-20.04/MidiKey ./MidiKey ubuntu-20.04
+          mv ./MidiKey ubuntu-latest/MidiKey ./MidiKey ubuntu-latest
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
           name: MidiKey bundle
           files: |
-            ${{github.workspace}}/MidiKey ubuntu-20.04/*
-            ${{github.workspace}}/MidiKey ubuntu-latest/*
+            MidiKey ubuntu-20.04
+            MidiKey ubuntu-latest
             LICENSE
             README.md  
     
