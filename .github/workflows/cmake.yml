@@ -64,7 +64,7 @@ jobs:
         run: ls -R     
       - name: Rename builds
         run: |
-          mkdir rel
+          mkdir bin
           mv "./MidiKey ubuntu-20.04/MidiKey" "./bin/MidiKey ubuntu-20.04"
           mv "./MidiKey ubuntu-latest/MidiKey" "./bin/MidiKey ubuntu-latest"
       - name: Create release
