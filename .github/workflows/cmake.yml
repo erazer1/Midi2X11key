@@ -67,8 +67,8 @@ jobs:
         with:
           name: MidiKey bundle
           files: |
-            ${{github.workspace}}/MidiKey ubuntu-20.04/
-            ${{github.workspace}}/MidiKey ubuntu-latest/
+            ${{github.workspace}}/MidiKey ubuntu-20.04/*
+            ${{github.workspace}}/MidiKey ubuntu-latest/*
             LICENSE
             README.md  
     
