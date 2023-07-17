@@ -73,6 +73,7 @@ jobs:
           name: MidiKey bundle
           files: |
             ./bin/*
+            config_example.json
             LICENSE
             README.md  
     
