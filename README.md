@@ -22,6 +22,20 @@ nlohmann json library
 
 cxxopts library
 
+## Running
+
+In case you do not build the source yourself, one of the two binaries in the release can be used.
+
+One build is usable for Ubuntu 22.04 and one for Ubuntu 20.04 or the corresponding Debian version.
+
+Following dependencies are required for the binaries:
+
+Ubuntu 22.04 binary: librtmidi6, libxdo3
+
+Ubuntu 20.04 binary: librtmidi4, libxdo3
+
+As you can see the rtmidi version has changed between those two Ubuntu versions, therefore the two binaries are supplied.
+
 ## Program Parameters
 
 Running application without parameters will output the help.
